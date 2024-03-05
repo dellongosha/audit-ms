@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h1>Administrator Dashboard</h1>
+
+    <nav class="nav nav-pills mb-3">
+        <li class="nav-item"><a href="#users" class="nav-link active">Manage Users</a></li>
+        <li class="nav-item"><a href="#settings" class="nav-link">System Settings</a></li>
+        <li class="nav-item"><a href="#data" class="nav-link">View System Data</a></li>
+        <li class="nav-item"><a href="#invitations" class="nav-link">Create Invitations</a></li>
+    </nav>
+
+    <section id="users" class="mb-3">
+        <h2>User Management</h2>
+
+        <table id="user-table" class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Roles</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>John Doe</td>
+                <td>john.doe@example.com</td>
+                <td>Auditor, Reviewer</td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Jane Smith</td>
+                <td>jane.smith@example.com</td>
+                <td>Auditee</td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-secondary">Edit</a>
+                    <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <button id="add-user-btn" class="btn btn-primary">Add User</button>
+    </section>
+
+    <section id="settings" class="mb-3">
+        <h2>System Settings</h2>
+        <p>Sample settings content. You can replace this with actual settings options and functionalities.</p>
+    </section>
+
+    <section id="data" class="mb-3">
+        <h2>View System Data</h2>
+
+
+        <p>Sample system data content. You can replace this with actual data retrieval and display logic.</p>
+    </section>
+
+    <section id="invitations" class="mb-3">
+        <h2>Create Invitations</h2>
+        <p>Sample invitation form content. You can replace this with an actual form to create invitations with user
+            selection, role assignment, and invitation sending functionalities.</p>
+    </section>
+
+    <script src="script.js"></script>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jC8C6OIWjkcuq64zWJFgQ3qjlz7d9z"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

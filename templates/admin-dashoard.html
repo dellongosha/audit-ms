@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Dashboard</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+    <style>
+        /* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+nav {
+    background-color: #eee;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 5px;
+    border: 1px solid #ddd;
+}
+
+#add-user-btn {
+    float: right;
+    margin-top: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+select, input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Administrator Dashboard</h1>
+
+    <nav>
+        <ul>
+            <li><a href="#users">Manage Users</a></li>
+            <li><a href="#roles">Assign Roles</a></li>
+            <li><a href="#settings">System Settings</a></li>
+            <li><a href="#data">View System Data</a></li>
+            <li><a href="#invitations">Create Invitations</a></li>
+        </ul>
+    </nav>
+
+    <section id="users">
+        <h2>User Management</h2>
+        <table id="user-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                </tbody>
+        </table>
+        <button id="add-user-btn">Add User</button>
+    </section>
+
+    <section id="roles">
+        <h2>Assign User Roles</h2>
+        <form id="assign-role-form">
+            <label for="user-select">Select User:</label>
+            <select id="user-select"></select>
+
+            <label for="role-select">Assign Role:</label>
+            <select id="role-select">
+                <option value="Administrator">Administrator</option>
+                <option value="Auditor">Auditor</option>
+                <option value="Reviewer">Reviewer</option>
+                <option value="Auditee">Auditee</option>
+            </select>
+            <button type="submit">Assign Role</button>
+        </form>
+    </section>
+
+    <section id="settings">
+        <h2>System Settings</h2>
+        </section>
+
+    <section id="data">
+        <h2>View System Data</h2>
+        </section>
+
+    <section id="invitations">
+        <h2>Create Invitations</h2>
+        </section>
+<script>
+    // Replace these placeholders with your actual logic
+const userTableData = [
+    { name: "John Doe", email: "john.doe@example.com", role: "Auditor" },
+    { name: "Jane Smith", email: "jane.smith@example.com", role: "
+
+</script>
+<!--    <script src="script.js"></script>-->
+</body>
+</html>

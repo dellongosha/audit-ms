@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Sharing</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+    <style>
+        /* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+.document-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#shared-users-list {
+    list-style: none;
+    padding: 0;
+}
+
+.shared-user {
+    margin-bottom: 5px;
+}
+
+#share-form {
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Document Sharing</h1>
+
+    <div class="document-info">
+        <h2>Document Details</h2>
+        <p><strong>Name:</strong> <span id="document-name"></span></p>
+        <p><strong>Description:</strong> <span id="document-description"></span></p>
+        <p><strong>Uploaded By:</strong> <span id="uploaded-by"></span></p>
+        <p><strong>Uploaded On:</strong> <span id="upload-date"></span></p>
+    </div>
+
+    <h2>Shared With</h2>
+    <ul id="shared-users-list">
+    </ul>
+
+    <form id="share-form">
+        <label for="email">Share with:</label>
+        <input type="email" id="email" name="email" required>
+        <select id="role">
+            <option value="auditor">Auditor</option>
+            <option value="stakeholder">Stakeholder</option>
+        </select>
+        <button type="submit">Share Document</button>
+    </form>
+
+    <script>
+        // Replace placeholders with your actual logic
+const documentInfo = {
+    name: "Audit Report",
+    description: "Report on the financial statements",
+    uploadedBy: "John Doe (Auditor)",
+    uploadDate: "2024-03-05"
+}
+
+const sharedUsers = [
+    { name: "Jane Smith", role: "Auditor" },
+    { name: "Michael Chen", role: "Stakeholder" },
+];
+
+// Display document details
+document.getElementById("document-name").textContent = documentInfo.name;
+document.getElementById("document-description").textContent = documentInfo.description;
+document.getElementById("uploaded-by").textContent = documentInfo.uploadedBy;
+document.getElementById("upload-date").textContent = documentInfo.uploadDate;
+
+// Display shared users list
+const sharedUsersList = document.getElementById("shared-users-list");
+sharedUsers.forEach(user => {
+    const userElement = document.createElement("li");
+    userElement.classList.add("shared-user");
+    userElement.innerHTML = `${user.name} ( ${user.role} )`;
+    sharedUsersList.appendChild(userElement);
+});
+
+// Implement share form logic (connect to server to manage access)
+const shareForm = document.getElementById("share-form");
+shareForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+    const role = document.getElementById("role").value;
+
+    // Send share request data to server (replace with your backend logic)
+    // ...
+
+    // Clear form fields
+    document.getElementById("email").value = "";
+    // ... (Clear role selection if desired)
+});
+
+    </script>
+</body>
+</html>

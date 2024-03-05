@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Viewer and Comments</title>
+<!--  <link rel="stylesheet" href="style.css">-->
+    <style>
+        /* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1, h2 {
+  margin: 10px 0;
+}
+
+#document-container {
+  width: 60%;
+  float: left;
+}
+
+#comment-section {
+  width: 30%;
+  float: right;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+}
+
+#comments-list {
+  list-style: none;
+  padding: 0;
+}
+
+#comments-list li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#comment-form {
+  margin-top: 10px;
+}
+
+#comment-text {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+}
+
+    </style>
+</head>
+<body>
+  <div id="document-container">
+    <h1>Document Title</h1>
+    <iframe id="document-iframe" src="document.pdf"></iframe> </div>
+
+  <div id="comment-section">
+    <h2>Comments</h2>
+    <ul id="comments-list"></ul>
+    <form id="comment-form">
+      <textarea id="comment-text" name="comment-text" placeholder="Enter your comment here..." required></textarea>
+      <button type="submit">Post Comment</button>
+    </form>
+  </div>
+
+<!--  <script src="script.js"></script>-->
+<script>
+// Simulate fetching comments from a server (replace with actual data fetching logic)
+const comments = [
+  { name: "John Doe", message: "This document looks good overall." },
+  { name: "Jane Smith", message: "There might be a typo on page 5." },
+];
+
+// Function to display comments
+function displayComments(comments) {
+  const commentList = document.getElementById("comments-list");
+  commentList.innerHTML = ""; // Clear existing comments
+  for (const comment of comments) {
+    const commentItem = document.createElement("li");
+    commentItem.innerHTML = `<b>${comment.name}</b>: ${comment.message}`;
+    commentList.appendChild(commentItem);
+  }
+}
+
+// Display initial comments
+displayComments(comments);
+
+// Handle comment form submission (replace with actual comment submission logic)
+const commentForm = document.getElementById("comment-form");
+commentForm.addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent default form submission
+
+  const commentText = document.getElementById("comment-text").value;
+
+  // Simulate sending comment to server
+  console.log("Adding comment:", commentText);
+
+  // Clear the comment text field
+  document.getElementById("comment-text").value = "";
+});
+
+</script>
+</body>
+</html>

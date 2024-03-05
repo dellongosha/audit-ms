@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit Creation</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+    <style>
+        /* Basic Styling */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="url"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create New Audit</h1>
+
+        <form id="audit-creation-form">
+
+            <div class="form-group">
+                <label for="audit-name">Audit Name:</label>
+                <input type="text" id="audit-name" name="audit-name" value="Payroll Process Audit" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lead-auditor">Lead Auditor:</label>
+                <input type="text" id="lead-auditor" name="lead-auditor" value="Jane Smith" required>
+            </div>
+
+            <div class="form-group">
+                <label for="area-audited">Area to Be Audited:</label>
+                <input type="text" id="area-audited" name="area-audited" value="Payroll Department" required>
+            </div>
+
+            <div class="form-group">
+                <label for="audit-management">Area Management:</label>
+                <input type="text" id="audit-management" name="audit-management" value="John Doe (Payroll Manager)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" value="2024-03-20" required>
+            </div>
+
+            <div class="form-group">
+                <label for="end-date">End Date:</label>
+                <input type="date" id="end-date" name="end-date" value="2024-03-24" required>
+            </div>
+
+            <div class="form-group">
+                <label for="objectives">Audit Objectives:</label>
+                <ul id="objectives-list">
+                    <li><input type="text" name="objectives[]" value="Verify accuracy of payroll calculations"></li>
+                    <li><input type="text" name="objectives[]" value="Ensure compliance with tax regulations"></li>
+                </ul>
+                <button type="button" id="add-objective">Add Objective</button>
+            </div>
+
+            <div class="form-group">
+                <label for="meeting-link">Meeting Link:</label>
+                <input type="url" id="meeting-link" name="meeting-link" value="https://meet.example.com/audit-kickoff">
+            </div>
+
+            <div class="form-group">
+                <label for="meeting-time">Meeting Time:</label>
+                <input type="datetime-local" id="meeting-time" name="meeting-time" value="2024-03-20T10:00">
+            </div>
+
+            <button type="submit">Create Audit</button>
+        </form>
+    </div>
+
+    <script>
+        // ... (Same as the previous script, add functionality to add objectives)
+
+    </script>
+</body>
+</html>

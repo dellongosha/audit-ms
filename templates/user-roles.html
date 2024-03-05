@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Roles</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+    <style>
+        /* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+ul ul {
+    margin-left: 20px;
+}
+
+pre {
+    font-family: monospace;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+    </style>
+</head>
+<body>
+    <h1>User Roles and Permissions</h1>
+
+    <p>This system defines four user roles:</p>
+
+    <ul class="roles">
+        <li>
+            <h2>Administrator</h2>
+            <p>Permissions:</p>
+            <ul>
+                <li>Create, edit, and delete all user accounts.</li>
+                <li>Assign user roles.</li>
+                <li>Manage system settings.</li>
+                <li>View all system data.</li>
+                <li>Create invitations for all roles.</li>
+            </ul>
+        </li>
+        <li>
+            <h2>Auditor</h2>
+            <p>Permissions:</p>
+            <ul>
+                <li>View assigned audits.</li>
+                <li>Perform audits and record findings.</li>
+                <li>Collaborate with other auditors on assigned audits.</li>
+                <li>View relevant audit documentation.</li>
+                <li>Create invitations for reviewers and auditees for assigned audits.</li>
+            </ul>
+        </li>
+        <li>
+            <h2>Reviewer</h2>
+            <p>Permissions:</p>
+            <ul>
+                <li>View assigned documents for review.</li>
+                <li>Leave comments and feedback on reviewed documents.</li>
+                <li>Collaborate with other reviewers on assigned documents.</li>
+            </ul>
+        </li>
+        <li>
+            <h2>Auditee</h2>
+            <p>Permissions:</p>
+            <ul>
+                <li>View assigned documents.</li>
+                <li>Respond to comments and feedback from reviewers.</li>
+                <li>Access information relevant to their role.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <pre>
+**Sample Users:**
+
+- User: John Doe (Administrator)
+- User: Jane Smith (Auditor)
+- User: Michael Chen (Reviewer)
+- User: Sarah Lee (Auditee)
+    </pre>
+</body>
+</html>
